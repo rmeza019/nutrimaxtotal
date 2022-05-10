@@ -1,0 +1,24 @@
+---
+title: "Contacto"
+date: 2022-05-08T14:33:32-06:00
+draft: true
+---
+
+<form action="#" method="post">
+    <label>
+        Nombre
+        <input type="text" name="nombre" placeholder="Nombre completo" required oninvalid="this.setCustomValidity('Favor llenar este campo')"
+        oninput="this.setCustomValidity('')">
+    </label>
+
+    <label>
+        Correo electr&oacute;nico
+        <input type="email" name="correo electr&oacute;nico" placeholder="Correo electr&oacute;nico" required>
+    </label>
+
+    <label>
+        Mensaje
+        <textarea name="mensaje" placeholder="Mensaje" required></textarea>
+    </label>
+    <input type="submit" name="enviar" value="Enviar">
+</form>
