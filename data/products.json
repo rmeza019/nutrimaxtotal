@@ -1,0 +1,23 @@
+{
+    "althea-rubber": {
+      "id": 9,
+      "league": "Pink",
+      "name": "Althea Rubber",
+      "spotted": "La Virgen",
+      "svg": ""
+    },
+    "amity-granite": {
+      "id": 6,
+      "league": "Green",
+      "name": "Amity Granite",
+      "spotted": "Kampot",
+      "svg": ""
+    },
+    "rengular-boblar": {
+      "id": 7,
+      "league": "Green",
+      "name": "Rengular Boblar",
+      "spotted": "Loogabarooga",
+      "svg": ""
+    }
+  }

@@ -1,0 +1,26 @@
+{{/*
+    GetProductPages
+    Retrieves the list of term pages for the `products_refs` taxonomy.
+  
+    @author @regisphilibert
+  
+    @context Any (.)
+  
+    @access private
+  
+    @returns Collection of Pages
+  
+    @example - Go Template 
+              We don't need a context
+              We don't need a variant either as returned value is the same across build
+  
+      {{ with partialCached "GetProductPages" "GetProductPages" }}
+        Product name is {{ .name }}
+      {{ end }}
+  */}}
+  {{ $products := slice }}
+  {{ range site.Taxonomies.products_refs }}
+    {{ $products = $products | append .Page }}
+  {{ end }}
+  
+  {{ return $products }}

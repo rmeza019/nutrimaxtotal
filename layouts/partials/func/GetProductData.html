@@ -1,0 +1,27 @@
+{{/*
+    GetProductData
+    Retrieves the data of a Product given a key
+  
+    @author @regisphilibert
+  
+    @context String
+  
+    @access private
+  
+    @returns Map
+      String (.name)
+      String (.spotted)
+      String (.svg)
+  
+    @example - Go Template
+              Variant is the lone parameter
+      {{ with partialCached "GetProductData" "gus-vinyl" "gus-vinyl" }}
+        Product name is {{ .name }}
+      {{ end }}
+  */}}
+  {{ $Product := dict }}
+  {{ with index site.Data.products . }}
+    {{ $Product = . }}
+  {{ end }}
+  
+  {{ return $Product }}
