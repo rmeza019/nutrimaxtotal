@@ -2,13 +2,20 @@
   <div class="container">
     <div class="md:grid grid-cols-10">
       {{ with partialCached "func/GetProductData" .Data.Term .Data.Term }}
-      <div class="col-span-4 ">
-        <h1 class=" text-4xl ">{{ .name }}</h1>
-        <div class="mt-4">{{ .name }} was spotted in {{ .spotted }}</div>
-      </div>
-      <div class="col-span-6">
-        <div class="w-full">{{ .svg | safeHTML }}</div>
-      </div>
+      <main>
+        <h1>{{ .name }}</h1>
+        <h1>{{ .nameSpanish }}</h1>
+        <h3>{{ .price }}</h3>
+        <p>{{ .format }}</p>
+        <p>{{ .howToTake }}</p>
+        <p>{{ .description }}</p>
+      
+        <a href="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" target="_blank" class="" role="button">
+          Contactar
+        </a>
+      
+        <img src="{{ .image }}" alt="">
+      </main>
       {{ end }}
      
     </div>

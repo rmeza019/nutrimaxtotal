@@ -1,23 +1,29 @@
 {
-    "althea-rubber": {
+    "nascent-iodine": {
       "id": 9,
-      "league": "Pink",
-      "name": "Althea Rubber",
-      "spotted": "La Virgen",
-      "svg": ""
+      "name": "Nascent Iodine",
+      "nameSpanish": "Yodo Nascent",
+      "price": "₡ 64,000",
+      "format": "1 unidad",
+      "howToTake": "Cómo tomar...",
+      "description": "Detailed product description...",
+      "image": "/images/products/nascent-iodine.png"
     },
-    "amity-granite": {
-      "id": 6,
-      "league": "Green",
-      "name": "Amity Granite",
-      "spotted": "Kampot",
-      "svg": ""
+    "colageno-molecular": {
+      "id": 10,
+      "name": "Molecular Collagen",
+      "nameSpanish": "Colágeno Molecular",
+      "price": "₡ 32,000",
+      "format": "1 unidad",
+      "howToTake": "Cómo tomar...",
+      "description": "Detailed product description...",
+      "image": "/images/products/colageno-molecular.png"
     },
     "rengular-boblar": {
       "id": 7,
       "league": "Green",
       "name": "Rengular Boblar",
       "spotted": "Loogabarooga",
-      "svg": ""
+      "img": ""
     }
   }
