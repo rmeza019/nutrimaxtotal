@@ -1,18 +1,17 @@
 {{ define "header" }}
-{{ $logoSite := "images/logos/NutrimaxTotal_Logo.jpg" }}
-{{ $logoFacebook := "images/logos/Facebook_Logo.png" }}
-{{ $logoInstagram := "images/logos/Instagram_Logo.png" }}
     <header>
         <nav>
-            <a href="/">
-                <img class="nav-icon" src="{{ $logoSite | relURL }}" alt="Nutrimaxtotal.com">
+            <a href="/" class="site-logo">
+                <img class="nav-icon" src="{{ "images/logos/NutrimaxTotal_Logo.jpg" | relURL }}" alt="Nutrimaxtotal.com">
             </a>
-            <a href="#">Productos</a>
-            <a href="#">Blog</a>
-            <a href="/acerca-de/">Acerca de</a>
-            <a href="/contacto/">Contacto</a>
-            <a href="https://www.facebook.com/Nutrimaxtotal" target="_blank"><img class="nav-icon" src="{{ $logoFacebook | relURL }}" alt="Facebook page"></a>
-            <a href="https://www.instagram.com/Nutrimaxtotal/" target="_blank"><img class="nav-icon" src="{{ $logoInstagram | relURL }}" alt="Instagram page"></a>
+            <a href="#" class="nav-page">Productos</a>
+            <a href="#" class="nav-page">Blog</a>
+            <a href="/acerca-de/" class="nav-page">Acerca de</a>
+            <a href="/contacto/" class="nav-page">Contacto</a>
+            <a href="https://www.instagram.com/Nutrimaxtotal/" target="_blank" class="nav-image-link">
+                <img class="nav-icon" src="{{ "images/logos/Instagram_Logo.png" | relURL }}" alt="Instagram page"></a>
+            <a href="https://www.facebook.com/Nutrimaxtotal" target="_blank" class="nav-image-link">
+                <img class="nav-icon" src="{{ "images/logos/Facebook_Logo.png" | relURL }}" alt="Facebook page"></a>
         </nav>
     </header>
 {{ end }}

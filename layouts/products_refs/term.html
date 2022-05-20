@@ -1,23 +1,23 @@
 {{ define "main" }}
-  <div class="container">
-    <div class="md:grid grid-cols-10">
-      {{ with partialCached "func/GetProductData" .Data.Term .Data.Term }}
-      <main>
-        <h1>{{ .name }}</h1>
-        <h1>{{ .nameSpanish }}</h1>
-        <h3>{{ .price }}</h3>
-        <p>{{ .format }}</p>
-        <p>{{ .howToTake }}</p>
-        <p>{{ .description }}</p>
-      
-        <a href="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" target="_blank" class="" role="button">
-          Contactar
-        </a>
-      
-        <img src="{{ .image }}" alt="">
-      </main>
-      {{ end }}
-     
-    </div>
-  </div>
+  {{ with partialCached "func/GetProductData" .Data.Term .Data.Term }}
+  <main class="main-container">
+    <section class="product-details">
+      <h1>
+        <strong>{{ .name }}</strong>
+        {{ .nameSpanish }}
+      </h1>
+      <span>{{ .price }}</span>
+      <span>{{ .format }}</sp>
+      <p>{{ .howToTake }}</p>
+      <p>{{ .description }}</p>
+
+      <a href="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" target="_blank" class="" role="button">
+      Contactar
+      </a>
+    </section>
+    <section class="product-media">
+      <img src="{{ .image }}" alt="" class="product-image">
+    </section>
+  </main>
+  {{ end }}
 {{ end }}

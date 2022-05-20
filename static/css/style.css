@@ -1,0 +1,107 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     background: lightgray;
+     font-family: 'Source Sans Pro', sans-serif;
+     min-height: 100vh;
+     display: flex;
+     flex-direction: column;
+ }
+ 
+ h1 strong {
+      display: block;
+      font-size: 100%;
+      opacity: 0.75;
+ }
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header, footer {
+     height: 10vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;  
+}
+
+
+header {
+     margin-bottom: 5%;
+     background: red;
+}
+
+footer {
+     background: black;
+}
+
+.main-container {
+     align-self: center;
+     flex: 1;
+     margin-bottom: 5%;
+     width: 80%;
+
+     display: flex;
+     flex-flow: wrap row;
+     justify-content: space-evenly;
+
+     border: solid 1px black;
+}
+
+section {
+     border: solid 1px black;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+.product-media {
+     order: -1;
+}
+
+.product-image {
+     max-height: 500px;
+}
+
+.product-details {
+
+}
+
+nav {
+     display: flex;
+     flex-flow: row nowrap;
+     justify-content: space-around;
+     width: 90%;
+}
+
+.nav-page {
+     align-self:center;
+}
+
+.site-logo {
+     flex: 0.75;     
+}
+
+.nav-icon {
+     width: 40px;
+}
