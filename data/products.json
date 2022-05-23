@@ -1,29 +1,44 @@
 {
     "nascent-iodine": {
-      "id": 9,
+      "id": 1,
       "name": "Nascent Iodine",
       "nameSpanish": "Yodo Nascent",
       "price": "₡ 64,000",
       "format": "1 unidad",
-      "howToTake": "Cómo tomar...",
-      "description": "Detailed product description...",
-      "image": "/images/products/nascent-iodine.png"
+      "howToTake":[
+          "Diluir 3 gotas en agua, beber en ayunas por la mañana. Aumente 1 gota por semana hasta alcanzar de 8-10 gotas diarias.",
+          "Según el modo de empleo sugerido cada botella puede durar hasta para 166 días aproximadamente.",
+          "Durante las primeras semanas pueden experimentarse síntomas de desintoxicación como jaquecas o fatiga. Evite tomar este suplemento antes de acostarse"
+      ],
+      "description": "",
+      "image": "/images/products/nascent-iodine.jpg"
     },
     "colageno-molecular": {
-      "id": 10,
+      "id": 2,
       "name": "Molecular Collagen",
       "nameSpanish": "Colágeno Molecular",
       "price": "₡ 32,000",
       "format": "1 unidad",
-      "howToTake": "Cómo tomar...",
+      "howToTake":[
+        "Diluir 3 gotas en agua, beber en ayunas por la mañana. Aumente 1 gota por semana hasta alcanzar de 8-10 gotas diarias.",
+        "Según el modo de empleo sugerido cada botella puede durar hasta para 166 días aproximadamente.",
+        "Durante las primeras semanas pueden experimentarse síntomas de desintoxicación como jaquecas o fatiga. Evite tomar este suplemento antes de acostarse"
+    ],
       "description": "Detailed product description...",
       "image": "/images/products/colageno-molecular.png"
     },
-    "rengular-boblar": {
-      "id": 7,
-      "league": "Green",
-      "name": "Rengular Boblar",
-      "spotted": "Loogabarooga",
-      "img": ""
+    "hyaluronic-acid": {
+      "id": 3,
+      "name": "HYALURONIC ACID",
+      "nameSpanish": "Ácido Hyalurónico",
+      "price": "₡ 32,000",
+      "format": "1 unidad",
+      "howToTake":[
+        "Diluir 3 gotas en agua, beber en ayunas por la mañana. Aumente 1 gota por semana hasta alcanzar de 8-10 gotas diarias.",
+        "Según el modo de empleo sugerido cada botella puede durar hasta para 166 días aproximadamente.",
+        "Durante las primeras semanas pueden experimentarse síntomas de desintoxicación como jaquecas o fatiga. Evite tomar este suplemento antes de acostarse"
+    ],
+      "description": "Detailed product description...",
+      "image": "/images/products/hyaluronic-acid.jpg"
     }
   }

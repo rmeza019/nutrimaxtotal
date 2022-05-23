@@ -24,6 +24,7 @@
 body {
      background: lightgray;
      font-family: 'Source Sans Pro', sans-serif;
+     font-size: 100%;
      min-height: 100vh;
      display: flex;
      flex-direction: column;
@@ -62,14 +63,14 @@ footer {
      width: 80%;
 
      display: flex;
-     flex-flow: wrap row;
+     flex-flow: nowrap row;
      justify-content: space-evenly;
 
-     border: solid 1px black;
+     /* border: solid 1px black; */
 }
 
 section {
-     border: solid 1px black;
+     /* border: solid 1px black; */
 }
 
 /******************************************
@@ -77,15 +78,20 @@ section {
 /*******************************************/
 .product-media {
      order: -1;
+     flex: 1.2;
+     display: flex;
+     justify-content: center;
+     align-items: center;
 }
 
 .product-image {
-     max-height: 500px;
+     max-width: 70%;
 }
 
 .product-details {
-
+     flex: 1;
 }
+
 
 nav {
      display: flex;
@@ -94,14 +100,52 @@ nav {
      width: 90%;
 }
 
-.nav-page {
+.nav-link {
      align-self:center;
 }
 
-.site-logo {
+.home-link {
      flex: 0.75;     
 }
 
 .nav-icon {
-     width: 40px;
+     width: 2.5rem;
 }
+
+.site-logo {
+     width: 4.5rem;
+}
+
+.buy-button {
+     background: red;
+     color: white;
+     
+}
+
+.buy-button {
+     background-color: #4CAF50; /* Green */
+     border: none;
+     color: white;
+     padding: 1em 1.5em;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+     margin: 4px 2px;
+     cursor: pointer;
+     width: 100%;
+}
+
+.buy-button:hover {
+     background-color: #555;
+     cursor: pointer;
+}
+
+.buy-button:active {
+background-color: black;
+}
+
+.buy-button:visited {
+background-color: #ccc;
+}
+

@@ -7,13 +7,19 @@
         {{ .nameSpanish }}
       </h1>
       <span>{{ .price }}</span>
-      <span>{{ .format }}</sp>
-      <p>{{ .howToTake }}</p>
+      <p>{{ .format }}</p>
+      <span></span>
+      {{ range $i, $e := .howToTake }}
+        {{ if eq $i 0 }}
+          <p><strong>Modo de empleo: </strong>{{ . }}</p>
+        {{ else }}
+          <p>{{ . }}</p>
+        {{ end }}
+      {{ end }}
       <p>{{ .description }}</p>
-
-      <a href="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" target="_blank" class="" role="button">
-      Contactar
-      </a>
+      <form action="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" rel="noopener noreferrer">
+        <input type="submit" value="Comprar" class="buy-button"/>
+      </form>
     </section>
     <section class="product-media">
       <img src="{{ .image }}" alt="" class="product-image">
