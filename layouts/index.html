@@ -1,90 +1,31 @@
 {{ define "main" }}
-
-  <!-- <div class="">
-    <div class="col-span-4 mb-16 text-3xl md:text-6xl max-w-3xl mx-auto leading-snug text-center font-bold  ">
-      {{ .Content }}
-    </div>
-    <div class="col-span-6">
-      <div class="text-4xl mb-4 flex justify-between">
-        <div>Spot your monsters!</div>
-        {{ with site.GetPage "/products" }}
-        <a href="{{ .RelPermalink }}" class="block">All Monsters -></a>
-        {{ end }}
-
-      </div>
-      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
-        {{ range $page := first 8 (partialCached "func/GetProductPages" "GetProductPages") }}
-          {{ partialCached "product" . . }}
-        {{ end }}
-      </div>
-     </div>
-  </div> -->  
-
+<section>
   <h1>Productos</h1>
+  <div>
+    {{ .Content }}
+  </div>
+</section>
+<main class="main-container">
+  {{ range partialCached "func/GetProductPages" "GetProductPages" }}
+    {{ with partialCached "func/GetProductData" .Data.Term .Data.Term }}
+    <a href="/product/{{ .url }}">
+      <div class="product-card">
+        <div class="product-image">
+          <img src="{{ .image }}" alt="" >
+        </div>
+        <div class="product-info">
+          <h5>{{ .name }}</h5>
+          <h6>{{ .price }}</h6>
+        </div>
+      </div>
+    </a>
+    {{ end }}
+  {{ end }}
+</main>
 
-  <section class="products">
-    <!-- It's likely you'll need to link the card somewhere. You could add a button in the info, link the titles, or even wrap the entire card in an <a href="..."> -->
-  
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-  
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-    
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-
-    <div class="product-card">
-      <div class="product-image">
-        <img src="images/products/colageno-molecular.png">
-      </div>
-      <div class="product-info">
-        <h5>Winter Jacket</h5>
-        <h6>$99.99</h6>
-      </div>
-    </div>
-  
-  </section>
-
+<!-- <div class="col-span-6">
+    {{ range $page := first 8 (partialCached "func/GetProductPages" "GetProductPages") }}
+      {{ partialCached "product" . . }}
+    {{ end }}
+-->
 {{ end }}

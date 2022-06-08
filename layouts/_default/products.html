@@ -1,10 +1,25 @@
 {{ define "main" }}
-  <div class="text-3xl mb-4">
-    {{ partial "stats" . }}
-  </div>
-  <div class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8">
+  <section class="products">
+    <!-- It's likely you'll need to link the card somewhere. You could add a button in the info, link the titles, or even wrap the entire card in an <a href="..."> -->
+
+    <div class="product-card">
+      <div class="product-image">
+        <img src="images/products/colageno-molecular.png">
+      </div>
+      <div class="product-info">
+        <h5>Winter Jacket</h5>
+        <h6>$99.99</h6>
+      </div>
+    </div>
+
+
+    
+  </section>
+  <div>
     {{ range partialCached "func/GetProductPages" "GetProductPages" }}
       {{ partialCached "product" . . }}
     {{ end }}
   </div>
+
+  <img src="images\products\hyaluronic-acid.jpg">
 {{ end }}

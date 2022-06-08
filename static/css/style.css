@@ -73,6 +73,21 @@ section {
      /* border: solid 1px black; */
 }
 
+.contact-form{
+     align-self: center;
+     flex: 0.6;
+     height: 60vh;
+
+     display: flex;
+     flex-flow: nowrap column;
+     align-items: center;
+     justify-content: space-between;
+}
+
+.form-field {
+     display: block;
+}
+
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
@@ -176,7 +191,7 @@ background-color: #ccc;
 	flex-direction: column;
 	
 	padding: 2%;
-	flex: 1 25%;
+	flex: 1 16%;
      align-items: center;
    
      display: flex; /* so child elements can use flexbox stuff too! */

@@ -1,19 +1,35 @@
 {{ define "header" }}
     <header>
         <nav>
-            <div class="home-link">
-                <a href="/" >
-                    <img class="site-logo" src="{{ "images/logos/NutrimaxTotal_Logo.jpg" | relURL }}" alt="Nutrimaxtotal.com">
-                </a>
-            </div>
-            <a href="/" class="nav-link">Productos</a>
-            <a href="#" class="nav-link">Blog</a>
-            <a href="/acerca-de/" class="nav-link">Acerca de</a>
-            <a href="/contacto/" class="nav-link">Contacto</a>
-            <a href="https://www.instagram.com/Nutrimaxtotal/" class="nav-link">
-                <img class="nav-icon" src="{{ "images/logos/Instagram_Logo.png" | relURL }}" alt="Instagram page"></a>
-            <a href="https://www.facebook.com/Nutrimaxtotal" class="nav-link">
-                <img class="nav-icon" src="{{ "images/logos/Facebook_Logo.png" | relURL }}" alt="Facebook page"></a>
+            <ul>
+                <li>
+                    <div class="home-link">
+                        <a href="/" >
+                            <img class="site-logo" src="{{ "images/logos/NutrimaxTotal_Logo.jpg" | relURL }}" alt="Nutrimaxtotal.com">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <a href="/" class="nav-link">Productos</a>
+                </li>
+                <li>
+                    <a href="#" class="nav-link">Blog</a>
+                </li>
+                <li>
+                    <a href="/acerca-de/" class="nav-link">Acerca de</a>
+                </li>
+                <li>
+                    <a href="/contacto/" class="nav-link">Contacto</a>
+                </li>
+                <li>
+                    <a href="https://www.instagram.com/Nutrimaxtotal/" class="nav-link">
+                        <img class="nav-icon" src="{{ "images/logos/Instagram_Logo.png" | relURL }}" alt="Instagram page"></a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/Nutrimaxtotal" class="nav-link">
+                        <img class="nav-icon" src="{{ "images/logos/Facebook_Logo.png" | relURL }}" alt="Facebook page"></a>
+                </li>
+            </ul>
         </nav>
     </header>
 {{ end }}
