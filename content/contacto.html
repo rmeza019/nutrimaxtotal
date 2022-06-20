@@ -1,28 +1,46 @@
 ---
 title: "Contacto"
 ---
-<main class="main-container">
-    <form action="#" method="post" class="contact-form">
-        <label>
-            Nombre
-            <input type="text" name="nombre" placeholder="Nombre completo" required oninvalid="this.setCustomValidity('Favor llenar este campo')"
-            oninput="this.setCustomValidity('')" class="form-field">
-        </label>
-    
-        <label>
-            Correo electr&oacute;nico
-            <input type="email" name="correo electr&oacute;nico" placeholder="Correo electr&oacute;nico" required class="form-field">
-        </label>
+<main class="container">
+    <form action="#" method="post">
 
-        <label>
-            N&uacute;mero de tel&eacute;fono
-            <input type="tel" name="n&uacute;mero de tel&eacute;fono" placeholder="(+506) 1234-5678" class="form-field">
-        </label>
+        <div class="field">
+            <label class="label">
+                Nombre
+                <div class="control">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required oninvalid="this.setCustomValidity('Favor llenar este campo')"
+            oninput="this.setCustomValidity('')" class="input">
+                </div>
+            </label>
+        </div>
     
-        <label>
-            Mensaje
-            <textarea name="mensaje" placeholder="Mensaje" required class="form-field"></textarea>
-        </label>
-        <input type="submit" name="enviar" value="Enviar">
+        <div class="field">
+            <label class="label">
+                Correo electr&oacute;nico
+                <div class="control">
+                    <input type="email" name="correo electr&oacute;nico" placeholder="Correo electr&oacute;nico" required class="input">
+                </div>
+            </label>
+        </div>
+
+        <div class="field">
+            <label class="label">
+                N&uacute;mero de tel&eacute;fono
+                <div class="control">
+                    <input type="tel" name="n&uacute;mero de tel&eacute;fono" placeholder="(+506) 1234-5678" class="input">
+                </div>
+            </label>
+        </div>
+    
+        <div class="field">
+            <label class="label">
+                Mensaje
+                <div class="control">
+                    <textarea name="mensaje" placeholder="Mensaje" required class="textarea"></textarea>
+                </div>
+            </label>
+        </div>
+
+        <input type="submit" name="enviar" value="Enviar" class="button">
     </form>
 </main>

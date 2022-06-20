@@ -1,6 +1,7 @@
-baseURL = 'http://example.org/'
+baseURL = 'http://nutrimax.com/'
 languageCode = 'es-cr'
 title = 'Nutrimax Total'
+copyright = "Copyright {year} | Nutrimax Total S.A."
 
 [taxonomies]
     product_ref = 'products_refs'

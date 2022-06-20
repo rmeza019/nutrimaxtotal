@@ -1,35 +1,42 @@
 {{ define "header" }}
-    <header>
-        <nav>
-            <ul>
-                <li>
-                    <div class="home-link">
-                        <a href="/" >
-                            <img class="site-logo" src="{{ "images/logos/NutrimaxTotal_Logo.jpg" | relURL }}" alt="Nutrimaxtotal.com">
-                        </a>
-                    </div>
-                </li>
-                <li>
-                    <a href="/" class="nav-link">Productos</a>
-                </li>
-                <li>
-                    <a href="#" class="nav-link">Blog</a>
-                </li>
-                <li>
-                    <a href="/acerca-de/" class="nav-link">Acerca de</a>
-                </li>
-                <li>
-                    <a href="/contacto/" class="nav-link">Contacto</a>
-                </li>
-                <li>
-                    <a href="https://www.instagram.com/Nutrimaxtotal/" class="nav-link">
+    <header class="column is-narrow">
+        <nav class="navbar" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/" >
+                    <img class="site-logo" src="{{ "images/logos/NutrimaxTotal_Logo.jpg" | relURL }}" alt="Nutrimaxtotal.com">
+                </a>
+            
+                <a role="button" class="navbar-burger burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a href="/" class="navbar-item">
+                        Productos
+                    </a>
+                    <a class="navbar-item">
+                        Blog
+                    </a>
+                    <a href="/acerca-de/" class="navbar-item">
+                        Acerca de
+                    </a>
+                    <a href="/contacto/" class="navbar-item">
+                        Contacto
+                    </a>
+                </div>
+                
+                <div class="navbar-end">
+
+                    <a href="https://www.instagram.com/Nutrimaxtotal/" class="navbar-item">
                         <img class="nav-icon" src="{{ "images/logos/Instagram_Logo.png" | relURL }}" alt="Instagram page"></a>
-                </li>
-                <li>
-                    <a href="https://www.facebook.com/Nutrimaxtotal" class="nav-link">
+                    <a href="https://www.facebook.com/Nutrimaxtotal" class="navbar-item">
                         <img class="nav-icon" src="{{ "images/logos/Facebook_Logo.png" | relURL }}" alt="Facebook page"></a>
-                </li>
-            </ul>
+                </div>
+            </div>
         </nav>
     </header>
 {{ end }}

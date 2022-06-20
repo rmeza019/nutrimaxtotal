@@ -1,29 +1,29 @@
 {{ define "main" }}
   {{ with partialCached "func/GetProductData" .Data.Term .Data.Term }}
-  <main class="main-container">
-    <section class="product-details">
-      <h1>
-        <strong>{{ .name }}</strong>
-        {{ .nameSpanish }}
-      </h1>
-      <span>{{ .price }}</span>
-      <p>{{ .format }}</p>
-      <span></span>
-      {{ range $i, $e := .howToTake }}
-        {{ if eq $i 0 }}
-          <p><strong>Modo de empleo: </strong>{{ . }}</p>
-        {{ else }}
-          <p>{{ . }}</p>
+  <main class="column container is-vertical-centered">
+    <div class="columns is-centered">
+      <section class="section column product-media">
+        <img src="{{ .image }}" alt="" class="product-image">
+      </section>
+      <section class="section column is-three-fifths product-details">
+        <h1>
+          <strong>{{ .name }}</strong>
+          {{ .nameSpanish }}
+        </h1>
+        <span>{{ .price }}</span>
+        <p>{{ .format }}</p>
+        <span></span>
+        {{ range $i, $e := .howToTake }}
+          {{ if eq $i 0 }}
+            <p><strong>Modo de empleo: </strong>{{ . }}</p>
+          {{ else }}
+            <p>{{ . }}</p>
+          {{ end }}
         {{ end }}
-      {{ end }}
-      <p>{{ .description }}</p>
-      <form action="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" rel="noopener noreferrer">
-        <input type="submit" value="Comprar" class="buy-button"/>
-      </form>
-    </section>
-    <section class="product-media">
-      <img src="{{ .image }}" alt="" class="product-image">
-    </section>
+        <p>{{ .description }}</p>
+        <a href="https://wa.me/50683910767?text=Consulta%20sobre%20{{ .nameSpanish }}" class="button is-medium is-fullwidth is-primary mt-2" role="button">Comprar</a>
+      </section>
+    </div>
   </main>
   {{ end }}
 {{ end }}
